@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: target/JavaWeb.war
+    destination: /opt/bitnami/apache-tomcat/webapps
+
+hooks:
+  ApplicationStart:
+    - location: restart.sh
+      timeout: 180
